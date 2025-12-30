@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* You can define your custom "fresh" colors directly here now! */
+@theme {
+  --color-fresh-green: #3b823e;
+  --color-fresh-orange: #f37021;
+}

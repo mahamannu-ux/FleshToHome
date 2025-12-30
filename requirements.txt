@@ -1,0 +1,12 @@
+fastapi[standard]
+python:3.12-slim
+sqlalchemy>=2.0.0
+pydantic>=2.0.0
+pydantic-settings
+uvicorn>=0.30.0
+python-multipart
+# If you use dates/times, standard datetime is built-in, 
+# but these help with serialization:
+python-dateutil 
+# For Cloud Run compatibility
+gunicorn
