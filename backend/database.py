@@ -4,6 +4,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 
+# Create the directory if it doesn't exist (important for Docker!)
+db_dir = "/app/data"
+if not os.path.exists(db_dir) and os.getenv("K_SERVICE"):
+    os.makedirs(db_dir)
+
 # This check allows you to keep using your local DB while developing
 # but switches to the /app/data path when deployed to Google Cloud.
 if os.getenv("K_SERVICE"):  # K_SERVICE is automatically set by Cloud Run

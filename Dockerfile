@@ -1,8 +1,11 @@
 # 1. Use an official Python runtime as a parent image
-FROM python:3.11-slim
+FROM python:3.12-slim
+
 
 # 2. Set the working directory in the container
 WORKDIR /app
+
+ENV PYTHONPATH=/app
 
 # 3. Copy only requirements first (to leverage Docker caching)
 COPY requirements.txt .
@@ -19,4 +22,5 @@ RUN mkdir -p /app/data
 
 # 7. Start the application
 # Use the PORT environment variable provided by Google Cloud Run
-CMD uvicorn ./backend/main:app --host 0.0.0.0 --port ${PORT:-8080}
+# CMD uvicorn backend/main:app --host 0.0.0.0 --port ${PORT:-8080}
+CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8080"]

@@ -3,14 +3,16 @@ from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 from typing import List
 import os
-import models, schemas
-from database import engine, get_db, SessionLocal
+
+# import models, schemas
+from backend.database import engine, get_db, SessionLocal
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
-import seed
+
+from backend import models, schemas, database, seed
 
 # ... (your other imports like models, get_db, etc.)
 

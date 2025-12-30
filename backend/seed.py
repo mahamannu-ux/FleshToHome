@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
-from database import SessionLocal, engine
-import models
+from backend.database import SessionLocal, engine
+import backend.models
 
 # 1. Create the database tables
-models.Base.metadata.create_all(bind=engine)
+backend.models.Base.metadata.create_all(bind=engine)
 
 
 def seed_data():
@@ -23,10 +23,12 @@ def seed_data():
 
     for name in categories_names:
         existing = (
-            db.query(models.Category).filter(models.Category.name == name).first()
+            db.query(backend.models.Category)
+            .filter(backend.models.Category.name == name)
+            .first()
         )
         if not existing:
-            new_cat = models.Category(
+            new_cat = backend.models.Category(
                 name=name, image_url=categories_image_urls[categories_names.index(name)]
             )
             db.add(new_cat)
@@ -193,12 +195,12 @@ def seed_data():
         for item in items:
             # Check if product exists to avoid double-seeding
             exists = (
-                db.query(models.Product)
-                .filter(models.Product.name == item["name"])
+                db.query(backend.models.Product)
+                .filter(backend.models.Product.name == item["name"])
                 .first()
             )
             if not exists:
-                product = models.Product(
+                product = backend.models.Product(
                     name=item["name"],
                     price=item["price"],
                     weight_unit=item["unit"],

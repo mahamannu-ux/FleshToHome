@@ -19,7 +19,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  const API_BASE_URL = "http://localhost:8000";
+  const API_BASE_URL = "https://flesh-to-home-api-632950254218.asia-south2.run.app";
 
   const [showAuthModal, setShowAuthModal] = useState(true); // Show on land
   const [authStep, setAuthStep] = useState("phone"); // 'phone' or 'otp'

@@ -1,0 +1,10 @@
+.gcloudignore
+.git
+.gitignore
+node_modules/
+venv/
+env/
+dist/
+build/
+*.db
+.DS_Store
