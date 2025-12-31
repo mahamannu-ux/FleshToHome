@@ -1,4 +1,4 @@
-[[FleshToHome]{}](https://trans-serenity-482815-n7.web.app/)
+[[FleshToHome]](https://trans-serenity-482815-n7.web.app/)
 is a Vibe-Coded version of
 [[www.freshtohome.com]](http://www.freshtohome.com). It is a
 web App, with a web-frontend ( desktop browser ). Not optimized for
