@@ -1,6 +1,6 @@
-[[FleshToHome]{.underline}](https://trans-serenity-482815-n7.web.app/)
+[[FleshToHome]{}](https://trans-serenity-482815-n7.web.app/)
 is a Vibe-Coded version of
-[[www.freshtohome.com]{.underline}](http://www.freshtohome.com). It is a
+[[www.freshtohome.com]](http://www.freshtohome.com). It is a
 web App, with a web-frontend ( desktop browser ). Not optimized for
 Mobile browser
 
@@ -26,7 +26,7 @@ Mobile browser
 ## Goal
 
 To test abilities and weaknesses of AI Coding Tools. For this task, a
-chat window ( i.e. gemin/chatgpti web app) was used, which did not have
+chat window ( i.e. gemin/chatgpt web app) was used, which did not have
 access to all source files, like their CLI/IDE versions. The entire
 source code is small,\~2K.
 
